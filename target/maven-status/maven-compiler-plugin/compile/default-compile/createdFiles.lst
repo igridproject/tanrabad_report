@@ -1,0 +1,6 @@
+com\nectec\tanrabad\controller\OXDService.class
+com\nectec\tanrabad\controller\OXDToken.class
+com\nectec\trbreport\user\UserManager.class
+com\nectec\tanrabad\controller\ReportController.class
+com\nectec\trbreport\user\UserProfile.class
+com\nectec\tanrabad\controller\Logout.class
