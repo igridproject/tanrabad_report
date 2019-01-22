@@ -150,7 +150,6 @@ public class OXDService {
     }
     
     public String getLogoutURL(String accessToken) throws IOException{
-        String profile = null;
         try {
             client = new CommandClient(this.HOST, this.PORT);
             final GetLogoutUrlParams commandParams = new GetLogoutUrlParams();
