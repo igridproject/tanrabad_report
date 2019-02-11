@@ -30,9 +30,9 @@ import org.xdi.oxd.common.response.LogoutResponse;
  */
 public class OXDService {
     
-    private String OXD_ID = "1893517a-9298-4809-b897-2d8ec8edf38c";
-    private String HOST = "localhost";
-    private int PORT = 8099;
+    private final String OXD_ID = "de5474c5-0cf2-4d7a-8ba0-cf64037a54cb";
+    private final String HOST = "localhost";
+    private final int PORT = 8099;
     public static String POST_LOGOUT_REDIRECT_URL = "https://reporttest.lsr.nectec.or.th/trbreport/report";
     public static String IAAM_REG_URL = "https://iaamtest.lsr.nectec.or.th/iaamreg";
     

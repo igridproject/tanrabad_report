@@ -77,6 +77,21 @@ public class ReportController extends HttpServlet {
                     response.sendRedirect(OXDService.POST_LOGOUT_REDIRECT_URL);
                 }
             }  
+            else{
+                if(!userProfile.getEmailVerified().equals("")){
+                    if(userProfile.getEmailVerified().equals("true") && userProfile.getUserState().equals("active")){
+                        UserManager.storeLoginedUser(request.getSession(), userProfile);
+                        request.setAttribute("profile", userProfile);
+                        request.getRequestDispatcher("index.jsp").forward(request, response);
+                    }
+                    else {
+                        response.sendRedirect(OXDService.IAAM_REG_URL + "/profile/");
+                    }
+                }
+                else{
+                    response.sendRedirect(OXDService.IAAM_REG_URL + "/edit-profile/");
+                }
+            }
         }
         else {
             if(request.getParameter("code") == null){
@@ -132,5 +147,5 @@ public class ReportController extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-
+    
 }
